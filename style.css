@@ -570,6 +570,7 @@ a:active {
 
 .article-header {
 	position: relative;
+	margin-bottom: 15px;
 	/*border: thin solid red;*/
 }
 
@@ -596,6 +597,7 @@ a:active {
 
 .article-header img {
 	height: 167px;
+	width: 297px;
 }
 
 

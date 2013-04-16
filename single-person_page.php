@@ -13,26 +13,13 @@ get_header(); ?>
 		
 		<aside class="featured-works">
 				<h1>Featured Works</h1>
-				<!--Featured Works Repeater Field: Title/Image/Pagelink-->
-				<!--<ul>
-					<li>
-						<a class="title-link" href="#">
-							<h2>Sapuri</h2>
-							<img src="images/sapuri.jpg" alt="works tab" />
-						</a>
-					</li>
-				</ul>-->
-			<?php while ( have_posts() ) : the_post(); 
-				
-			?>
-				$loop_test_variable = <?php the_field( 'loop_test' ); ?>
 				
 				<?php
 					$do_not_duplicate = null;
 					$args = array(
 						'post_type' => 'title_page',
-						'category_name' => $loop_test_variable,
-						'showposts' => 1
+						'category_name' => 'sapuri',
+						'showposts' => 5
 					);
 					$featured_query = new WP_Query( $args );
 					while ( $featured_query->have_posts() ) : $featured_query->the_post();
@@ -41,9 +28,9 @@ get_header(); ?>
 					
 					<ul>
 						<li>
-							<a class="title-link" href="#">
+							<a class="title-link" href="<?php the_permalink(); ?>">
 								<h2><?php the_title(); ?></h2>
-								<img src="<?php the_field( 'title_image' ); ?>" alt="works tab" />
+								<?php the_post_thumbnail(); ?>
 							</a>
 						</li>
 					</ul>
@@ -56,11 +43,11 @@ get_header(); ?>
 		
 		<div id="content" class="site-content main-content" role="main">
 
-		
+		<?php while ( have_posts() ) : the_post(); ?>
 		
 			<header class="article-header">
-				<h1><?php the_field( 'person_name' ); ?></h1>
-				<img src="<?php the_field( 'person_image' ); ?>" />
+				<h1><?php the_title(); ?></h1>
+				<?php the_post_thumbnail(); ?>
 			</header>
 			
 			<ul class="vital-statistics">
