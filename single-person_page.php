@@ -22,23 +22,28 @@ get_header(); ?>
 						</a>
 					</li>
 				</ul>-->
+			<?php while ( have_posts() ) : the_post(); 
+				
+			?>
+				$loop_test_variable = <?php the_field( 'loop_test' ); ?>
 				
 				<?php
 					$do_not_duplicate = null;
 					$args = array(
-						'category-name' => 'sapuri',
+						'post_type' => 'title_page',
+						'category_name' => $loop_test_variable,
 						'showposts' => 1
 					);
 					$featured_query = new WP_Query( $args );
 					while ( $featured_query->have_posts() ) : $featured_query->the_post();
 					$do_not_duplicate = $post->ID;
 				?>
-					<?php get_template_part( 'content' ); ?>
+					
 					<ul>
 						<li>
 							<a class="title-link" href="#">
-								<h2>Sapuri</h2>
-								<img src="<?php the_field( 'title_image' ) ?>" alt="works tab" />
+								<h2><?php the_title(); ?></h2>
+								<img src="<?php the_field( 'title_image' ); ?>" alt="works tab" />
 							</a>
 						</li>
 					</ul>
@@ -51,7 +56,7 @@ get_header(); ?>
 		
 		<div id="content" class="site-content main-content" role="main">
 
-		<?php while ( have_posts() ) : the_post(); ?>
+		
 		
 			<header class="article-header">
 				<h1><?php the_field( 'person_name' ); ?></h1>
