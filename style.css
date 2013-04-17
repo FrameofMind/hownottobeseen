@@ -617,7 +617,7 @@ a:active {
 	display: none;
 }
 
-.section-page .featured-people {
+.section-page .featured-section {
 	width: 514px;
 	float: right;
 	/*margin-left: 170px;*/
@@ -625,18 +625,18 @@ a:active {
 	/*border: thin solid purple;*/
 }
 
-.section-page .featured-people ul {
+.section-page .featured-section ul {
 	list-style: none;
 	margin: 0px;
 }
 
-.section-page .featured-people li {
+.section-page .featured-section li {
 	position: relative;
 	margin-bottom: 30px;
 	/*border: thin solid red;*/
 }
 
-.section-page .featured-people h2 {
+.section-page .featured-section h2 {
 	background: black;
 	width: 167px;
 	height: 167px;
@@ -648,43 +648,43 @@ a:active {
 	font-size: 130%;
 }
 
-.section-page .featured-people a {
+.section-page .featured-section a {
 	color: white;
 }
 
-.section-page .featured-people a:hover {
+.section-page .featured-section a:hover {
 	color: #a7a7b7;
 }
 
-.section-page .featured-people img {
+.section-page .featured-section img {
 	height: 167px;
 }
 
-.section-page .featured-people .teaser {
+.section-page .featured-section .teaser {
 	width: 300px;
 	font-size: 80%;
 }
 
-.section-page .featured-people .teaser a {
+.section-page .featured-section .teaser a {
 	color: #8c0000;
 }
 
-.section-page .featured-people .teaser a:hover {
+.section-page .featured-section .teaser a:hover {
 	color: #a7a7b7;
 }
 
-.people-introduction {
+.section-introduction {
 	margin-bottom: 50px;
 }
 
-.people-introduction h1 {
+.section-introduction h1 {
 	color: #8c0000;
 	font-size: 160%;
 	margin-top: 0px;
 	margin-bottom: -7px;
 }
 
-.people-index h1 {
+.section-index h1 {
 	background: black;
 	color: white;
 	font-size: 200%;
@@ -695,15 +695,15 @@ a:active {
 	padding: 20px 0px 0px 0px;
 }
 
-.people-index  ul{
+.section-index  ul{
 	list-style: none;
 	margin: 0px 0px 0px 172px;
 	padding: 0px;
 }
 
-/*---Featured People Sidebar---*/
+/*---Featured Section Sidebar---*/
 
-.featured-people {
+.featured-section {
 	/*position: absolute;*/
 	/*top: 0px;
 	right: 0px;*/
@@ -713,39 +713,39 @@ a:active {
 	/*border: thin solid blue;*/
 }
 
-.featured-people img {
+.featured-section img {
 	width: 300px;
 }
 
-.featured-people h1 {
+.featured-section h1 {
 	color: #a7a7b7;
 	font-size: 160%;
 	margin-top: 0px;
 	margin-bottom: -7px;
 }
 
-.featured-people ul {
+.featured-section ul {
 	list-style: none;
 	margin: 0px;
 	padding: 0px;
 }
 
-.featured-people ul li {
+.featured-section ul li {
 	margin-bottom: 10px;
 }
 
-.featured-people ul h2 {
+.featured-section ul h2 {
 	margin: 0px;
 	font-size: 100%;
 	background: black;
 	padding: 2px 0px 2px 2px;
 }
 
-.featured-people a {
+.featured-section a {
 	color: white;
 }
 
-.featured-people a:hover {
+.featured-section a:hover {
 	color: #a7a7b7;
 }
 

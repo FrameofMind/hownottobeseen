@@ -1,6 +1,6 @@
 <?php
 /*
-Template Name: People Section Page
+Template Name: TV Section Page
 */
 
 /**
@@ -19,13 +19,13 @@ get_header(); ?>
 	<div id="primary" class="content-area section-page">
 		
 				<aside class="featured-section">
-					<h1>Featured People</h1>
+					<h1>Featured TV</h1>
 					<ul>
 						<?php
 							$do_not_duplicate = null;
 							$args = array(
-								'post_type' => 'person_page',
-								'category_name' => 'featured-people-section',
+								'post_type' => 'title_page',
+								'category_name' => 'featured-tv-section',
 								'showposts' => 10,
 								'order' => 'ASC',
 								'orderby' => 'title'
@@ -49,7 +49,7 @@ get_header(); ?>
 						?>
 						
 					</ul>
-				</aside><!--END Featured Section-->
+				</aside><!--END Featured People-->
 		
 		
 		
@@ -78,7 +78,8 @@ get_header(); ?>
 						<?php
 							$do_not_duplicate = null;
 							$args = array(
-								'post_type' => 'person_page',
+								'post_type' => 'title_page',
+								'category_name' => 'tv',
 								'showposts' => 100,
 								'order' => 'ASC',
 								'orderby' => 'title'
@@ -96,7 +97,7 @@ get_header(); ?>
 							wp_reset_postdata(); // end section-index loop
 						?>
 					</ul>
-				</section><!--END Section Index-->
+				</section><!--END People Index-->
 
 				
 
