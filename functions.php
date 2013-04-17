@@ -233,6 +233,14 @@ function create_my_post_types() {
 				'hierarchical' => true,
 		)
 	);
+	
+	function add_page_excerpt_support(){
+		add_post_type_support( 'page', 'excerpt' );
+		add_post_type_support( 'person_page', 'excerpt' );
+		add_post_type_support( 'title_page', 'excerpt' );
+	}
+		 
+	add_action('admin_init', 'add_page_excerpt_support');
 }
 
 

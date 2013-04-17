@@ -602,11 +602,165 @@ a:active {
 
 
 
+
+
+/*section page*/
+.section-page .main-content {
+	width: 514px;
+	/*margin-left: 170px;*/
+	padding: 30px 20px 0px 20px;
+	/*border: thin solid purple;*/
+	position: absolute;
+}
+
+.section-page .main-content .entry-header {
+	display: none;
+}
+
+.section-page .featured-people {
+	width: 514px;
+	float: right;
+	/*margin-left: 170px;*/
+	padding: 30px 20px 0px 20px;
+	/*border: thin solid purple;*/
+}
+
+.section-page .featured-people ul {
+	list-style: none;
+	margin: 0px;
+}
+
+.section-page .featured-people li {
+	position: relative;
+	margin-bottom: 30px;
+	/*border: thin solid red;*/
+}
+
+.section-page .featured-people h2 {
+	background: black;
+	width: 167px;
+	height: 167px;
+	position: absolute;
+	top: 0px;
+	right: 0px;
+	margin: 0px;
+	padding: 3px 7px 3px 7px;
+	font-size: 130%;
+}
+
+.section-page .featured-people a {
+	color: white;
+}
+
+.section-page .featured-people a:hover {
+	color: #a7a7b7;
+}
+
+.section-page .featured-people img {
+	height: 167px;
+}
+
+.section-page .featured-people .teaser {
+	width: 300px;
+	font-size: 80%;
+}
+
+.section-page .featured-people .teaser a {
+	color: #8c0000;
+}
+
+.section-page .featured-people .teaser a:hover {
+	color: #a7a7b7;
+}
+
+.people-introduction {
+	margin-bottom: 50px;
+}
+
+.people-introduction h1 {
+	color: #8c0000;
+	font-size: 160%;
+	margin-top: 0px;
+	margin-bottom: -7px;
+}
+
+.people-index h1 {
+	background: black;
+	color: white;
+	font-size: 200%;
+	width: 167px;
+	height: 50px;
+	float: left;
+	margin: 0px;
+	padding: 20px 0px 0px 0px;
+}
+
+.people-index  ul{
+	list-style: none;
+	margin: 0px 0px 0px 172px;
+	padding: 0px;
+}
+
+/*---Featured People Sidebar---*/
+
+.featured-people {
+	/*position: absolute;*/
+	/*top: 0px;
+	right: 0px;*/
+	width: 340px;
+	float: right;
+	padding-left: 40px;
+	/*border: thin solid blue;*/
+}
+
+.featured-people img {
+	width: 300px;
+}
+
+.featured-people h1 {
+	color: #a7a7b7;
+	font-size: 160%;
+	margin-top: 0px;
+	margin-bottom: -7px;
+}
+
+.featured-people ul {
+	list-style: none;
+	margin: 0px;
+	padding: 0px;
+}
+
+.featured-people ul li {
+	margin-bottom: 10px;
+}
+
+.featured-people ul h2 {
+	margin: 0px;
+	font-size: 100%;
+	background: black;
+	padding: 2px 0px 2px 2px;
+}
+
+.featured-people a {
+	color: white;
+}
+
+.featured-people a:hover {
+	color: #a7a7b7;
+}
+
+
+
+
+
+
+
 /*person-page*/
 .person-page .main-content {
 	width: 514px;
 	margin-left: 170px;
 	padding: 25px 20px 0px 20px;
+	float: left;
 }
 
 .vital-statistics {

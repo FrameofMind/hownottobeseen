@@ -1,6 +1,6 @@
 <?php
 /**
- * The Template for displaying all single posts.
+ * The Template for displaying all Person Page type posts.
  *
  * @package hownottobeseen
  */
@@ -11,39 +11,27 @@ get_header(); ?>
 
 	<div id="primary" class="content-area person-page">
 		
+		<?php while ( have_posts() ) : the_post(); ?>
+		
 		<aside class="featured-works">
 				<h1>Featured Works</h1>
-				
-				<?php
-					$do_not_duplicate = null;
-					$args = array(
-						'post_type' => 'title_page',
-						'category_name' => 'sapuri',
-						'showposts' => 5
-					);
-					$featured_query = new WP_Query( $args );
-					while ( $featured_query->have_posts() ) : $featured_query->the_post();
-					$do_not_duplicate = $post->ID;
-				?>
-					
-					<ul>
-						<li>
-							<a class="title-link" href="<?php the_permalink(); ?>">
-								<h2><?php the_title(); ?></h2>
-								<?php the_post_thumbnail(); ?>
-							</a>
-						</li>
-					</ul>
-				
-				<?php
-					endwhile;
-					wp_reset_postdata();
-				?>
+				<?php if( get_field( 'related_pages' ) ): ?>
+					<?php while( has_sub_field( 'related_pages' ) ): ?>
+						<ul>
+							<li>
+								<a class="title-link" href="<?php the_sub_field( 'page_link' ); ?>">
+									<h2><?php the_sub_field( 'page_title' ); ?></h2>
+									<img src="<?php the_sub_field( 'page_image' ); ?>" alt="works tab" />
+								</a>
+							</li>
+						</ul>
+					<?php endwhile; ?>
+				<?php endif; // end of repeater loop. ?>
 		</aside>
 		
+		
+		
 		<div id="content" class="site-content main-content" role="main">
-
-		<?php while ( have_posts() ) : the_post(); ?>
 		
 			<header class="article-header">
 				<h1><?php the_title(); ?></h1>
