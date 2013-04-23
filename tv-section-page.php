@@ -66,7 +66,7 @@ get_header(); ?>
 				
 				<article class="section-introduction">
 					<h1><?php the_title(); ?></h1>
-					<?php get_template_part( 'content' ); ?>
+					<?php the_content(); ?>
 				</article><!--END Section Introduction-->
 				
 				
