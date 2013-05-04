@@ -18,7 +18,7 @@ get_header(); ?>
 
 
 
-	<div id="primary" class="content-area person-page">
+	<div id="primary" class="content-area home-page">
 		
 		<?php while ( have_posts() ) : the_post(); ?>
 		
@@ -58,12 +58,14 @@ get_header(); ?>
 		
 		<div id="content" class="site-content main-content" role="main">
 		
-			<h1><?php the_title(); ?></h1>
+			<article class="site-introduction">
+				<h1><?php the_title(); ?></h1>
 					
-			<?php the_content(); ?>
+				<?php the_content(); ?>
+			</article><!--END Site Introduction-->
 			
 			<article class="featured-article">
-				<h1>Featured Review</h1>
+				<h1 class="section-head">Featured Review</h1>
 				
 				<?php
 					$do_not_duplicate = null;

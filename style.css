@@ -584,7 +584,6 @@ a:active {
 	margin: 0px;
 	padding: 3px 7px 3px 7px;
 	font-size: 130%;
-	color: white;
 }
 
 .article-header a {
@@ -599,6 +598,38 @@ a:active {
 	height: 167px;
 	width: 297px;
 }
+
+
+
+
+
+/*home page*/
+.home-page .main-content {
+	width: 514px;
+	margin-left: 170px;
+	padding: 50px 20px 0px 20px;
+	float: left;
+}
+
+.site-introduction h1 {
+	color: #8c0000;
+	font-size: 160%;
+	margin-top: 0px;
+	margin-bottom: -7px;
+}
+
+.featured-article {
+	margin-top: 30px;
+}
+
+.featured-article .section-head {
+	color: #a7a7b7;
+	font-size: 160%;
+	margin-top: 0px;
+	margin-bottom: -7px;
+}
+
+
 
 
 
@@ -763,6 +794,10 @@ a:active {
 	float: left;
 }
 
+.person-page .article-header h1 {
+	color: white;
+}
+
 .vital-statistics {
 	list-style: none;
 	padding: 0px;
@@ -813,6 +848,13 @@ a:active {
 	background: white;
 }
 
+
+
+
+/*title page*/
+.title-page .article-header h1 {
+	color: white;
+}
 
 
 
