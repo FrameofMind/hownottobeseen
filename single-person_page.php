@@ -15,18 +15,21 @@ get_header(); ?>
 		
 		<aside class="featured-works">
 				<h1>Featured Works</h1>
-				<?php if( get_field( 'related_pages' ) ): ?>
-					<?php while( has_sub_field( 'related_pages' ) ): ?>
-						<ul>
+				<ul>
+					<?php if( get_field( 'related_pages' ) ): ?>
+						<?php while( has_sub_field( 'related_pages' ) ): ?>
 							<li>
 								<a class="title-link" href="<?php the_sub_field( 'page_link' ); ?>">
 									<h2><?php the_sub_field( 'page_title' ); ?></h2>
-									<img src="<?php the_sub_field( 'page_image' ); ?>" alt="works tab" />
+									<div class="masked-image-wrapper">
+										<div class="image-mask"></div>
+										<img src="<?php the_sub_field( 'page_image' ); ?>" alt="works tab" />
+									</div>
 								</a>
 							</li>
-						</ul>
-					<?php endwhile; ?>
-				<?php endif; // end of repeater loop. ?>
+						<?php endwhile; ?>
+					<?php endif; // end of repeater loop. ?>
+				</ul>
 		</aside>
 		
 		

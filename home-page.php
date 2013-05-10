@@ -40,9 +40,13 @@ get_header(); ?>
 					
 					
 						<li>
+							
 							<a class="title-link" href="<?php the_permalink(); ?>">
 								<h2><?php the_title(); ?></h2>
-								<?php the_post_thumbnail(); ?>
+								<div class="masked-image-wrapper">
+									<div class="image-mask"></div>
+									<?php the_post_thumbnail(); ?>
+								</div>
 							</a>
 						</li>
 						

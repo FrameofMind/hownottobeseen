@@ -684,7 +684,8 @@ a:active {
 }
 
 .section-page .featured-section a:hover {
-	color: #a7a7b7;
+	/*color: #a7a7b7;*/
+	color: white;
 }
 
 .section-page .featured-section img {
@@ -763,6 +764,7 @@ a:active {
 
 .featured-section ul li {
 	margin-bottom: 10px;
+	position: relative;
 }
 
 .featured-section ul h2 {
@@ -777,7 +779,8 @@ a:active {
 }
 
 .featured-section a:hover {
-	color: #a7a7b7;
+	/*color: #a7a7b7;*/
+	color: white;
 }
 
 
@@ -847,6 +850,61 @@ a:active {
 .filmography tr:nth-child(even) td{
 	background: white;
 }
+
+/*---Featured Works Sidebar---*/
+
+.featured-works {
+	/*position: absolute;*/
+	/*top: 0px;
+	right: 0px;*/
+	width: 340px;
+	float: right;
+	padding-left: 40px;
+	/*border: thin solid blue;*/
+}
+
+.featured-works img {
+	width: 300px;
+}
+
+.featured-works h1 {
+	color: #a7a7b7;
+	font-size: 160%;
+	margin-top: 0px;
+	margin-bottom: -7px;
+}
+
+.featured-works ul {
+	list-style: none;
+	margin: 0px;
+	padding: 0px;
+}
+
+.featured-works ul li {
+	margin-bottom: 10px;
+}
+
+.featured-works ul h2 {
+	margin: 0px;
+	font-size: 100%;
+	background: black;
+	padding: 2px 0px 2px 2px;
+}
+
+.featured-works a {
+	color: white;
+}
+
+.featured-works a:hover {
+	/*color: #a7a7b7;*/
+	color: white;
+}
+
+
+
+
+
+
 
 
 
@@ -926,58 +984,12 @@ a:active {
 }
 
 .featured-items a:hover {
-	color: #a7a7b7;
-}
-
-
-
-/*---Featured Works Sidebar---*/
-
-.featured-works {
-	/*position: absolute;*/
-	/*top: 0px;
-	right: 0px;*/
-	width: 340px;
-	float: right;
-	padding-left: 40px;
-	/*border: thin solid blue;*/
-}
-
-.featured-works img {
-	width: 300px;
-}
-
-.featured-works h1 {
-	color: #a7a7b7;
-	font-size: 160%;
-	margin-top: 0px;
-	margin-bottom: -7px;
-}
-
-.featured-works ul {
-	list-style: none;
-	margin: 0px;
-	padding: 0px;
-}
-
-.featured-works ul li {
-	margin-bottom: 10px;
-}
-
-.featured-works ul h2 {
-	margin: 0px;
-	font-size: 100%;
-	background: black;
-	padding: 2px 0px 2px 2px;
-}
-
-.featured-works a {
+	/*color: #a7a7b7;*/
 	color: white;
 }
 
-.featured-works a:hover {
-	color: #a7a7b7;
-}
+
+
 
 
 
@@ -1044,6 +1056,25 @@ embed,
 iframe,
 object {
 	max-width: 100%;
+}
+
+
+.masked-image-wrapper {
+	position: relative;
+}
+
+.image-mask {
+	background: black;
+	position: absolute;
+	z-index: 100;
+	opacity: 0.4;
+	width: 100%;
+	height: 100%;
+	border-bottom: 5px solid white;
+}
+
+.section-page .image-mask {
+	width: 300px;
 }
 
 
