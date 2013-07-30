@@ -2,7 +2,7 @@ jQuery(document).ready(function($) {
   
 	
   
-	
+	//Masked image hover-fades.
 	$(".title-link").hover(
 	function() {
 		$(this).children(".masked-image-wrapper").children(".image-mask").fadeTo(600, 0);
@@ -12,6 +12,10 @@ jQuery(document).ready(function($) {
 	}
 	);
 	
+	
+	
+	
+	$(".featured-items, .featured-section, .featured-works").fadeIn(1500);
 	
 	
 	
