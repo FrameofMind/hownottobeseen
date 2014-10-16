@@ -178,7 +178,7 @@ function create_my_post_types() {
 		)
 	);
 
-	/*register_post_type( 'section_page', 
+	register_post_type( 'section_page', 
 		array(
 			'labels' => array(
 				'name' => __( 'Section Pages' ),
@@ -206,7 +206,7 @@ function create_my_post_types() {
 				'capability_type' => 'post',
 				'hierarchical' => true,
 		)
-	);*/
+	);
 	
 	register_post_type( 'title_page', 
 		array(
