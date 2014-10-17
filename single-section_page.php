@@ -15,11 +15,23 @@ get_header(); ?>
 						<?php
 							$section_title = get_field('child_page_type_slug');
 							$content_category = get_the_title();
+							$category_slug = get_category_by_slug($content_category);
+							$category_id = $category_slug->term_id;
 							$do_not_duplicate = null;
 							$args = array(
 								'post_type' => $section_title,
-								'category_name' => 'featured', $content_category,
-								'tags' => 'featured',
+								'category__and' => array( 18, $category_id ),
+								/*'tax_query' => array(
+									array(
+										'taxonomy' => 'category',
+										'field' => 'slug',
+										'terms' => array( $content_category, 'featured')
+									)
+								),8?
+								/*'content_type' => 'people',
+								'tag' => 'people',*/
+								/*'category_name' => 'featured',*/
+								/*'tag' => 'featured',*/
 								'showposts' => 10,
 								'order' => 'ASC',
 								'orderby' => 'title'
