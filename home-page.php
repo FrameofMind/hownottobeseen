@@ -29,10 +29,11 @@ get_header(); ?>
 							$do_not_duplicate = null;
 							$args = array(
 								'post_type' => 'person_page',
-								'category_name' => 'featured-people-section',
+								'category_name' => 'featured',
 								'showposts' => 10,
-								'order' => 'ASC',
-								'orderby' => 'title'
+								/*'order' => 'ASC',
+								'orderby' => 'title'*/
+								'orderby' => 'rand'
 							);
 							$featuredpeople_query = new WP_Query( $args );
 							while ( $featuredpeople_query->have_posts() ) : $featuredpeople_query->the_post();

@@ -248,17 +248,7 @@ function create_my_post_types() {
 }
 
 
-function content_type_init() {
-	// create a new taxonomy
-	register_taxonomy(
-		'content_type',
-		array( 'person_page', 'title_page' ),
-		array(
-			'label' => __( 'Content Type' ),
-		)
-	);
-}
-add_action( 'init', 'content_type_init' );
+
 
 
 

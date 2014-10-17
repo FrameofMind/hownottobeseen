@@ -21,20 +21,10 @@ get_header(); ?>
 							$args = array(
 								'post_type' => $section_title,
 								'category__and' => array( 18, $category_id ),
-								/*'tax_query' => array(
-									array(
-										'taxonomy' => 'category',
-										'field' => 'slug',
-										'terms' => array( $content_category, 'featured')
-									)
-								),8?
-								/*'content_type' => 'people',
-								'tag' => 'people',*/
-								/*'category_name' => 'featured',*/
-								/*'tag' => 'featured',*/
 								'showposts' => 10,
-								'order' => 'ASC',
-								'orderby' => 'title'
+								/*'order' => 'ASC',
+								'orderby' => 'title'*/
+								'orderby' => 'rand'
 							);
 							$featuredpeople_query = new WP_Query( $args );
 							while ( $featuredpeople_query->have_posts() ) : $featuredpeople_query->the_post();

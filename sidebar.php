@@ -15,10 +15,11 @@
 						$do_not_duplicate = null;
 						$args = array(
 							'post_type' => 'title_page', 'person_page',
-							'category_name' => 'featured-items',
+							'category_name' => 'featured-titles',
 							'showposts' => 5,
-							'order' => 'ASC',
-							'orderby' => 'none'
+							/*'order' => 'ASC',
+							'orderby' => 'none'*/
+							'orderby' => 'rand'
 						);
 						$featured_query = new WP_Query( $args );
 						while ( $featured_query->have_posts() ) : $featured_query->the_post();
