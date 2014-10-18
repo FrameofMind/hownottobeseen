@@ -67,6 +67,41 @@ get_header(); ?>
 						<?php endwhile; ?>
 					<?php endif; // end of repeater loop. ?>
 				</ul>
+				
+				<?php if( !get_field( 'related_titles' ) ): ?>
+				<h1>Other Titles</h1>
+				<ul>
+						<?php
+							$do_not_duplicate = null;
+							$args = array(
+								'post_type' => 'title_page',
+								'showposts' => 5,
+								/*'order' => 'ASC',
+								'orderby' => 'title'*/
+								'orderby' => 'rand'
+							);
+							$othertitles_query = new WP_Query( $args );
+							while ( $othertitles_query->have_posts() ) : $othertitles_query->the_post();
+						?>
+					
+					
+						<li>
+							<a class="title-link" href="<?php the_permalink(); ?>">
+								<h2><?php the_title(); ?></h2>
+								<div class="masked-image-wrapper">
+									<div class="image-mask"></div>
+									<?php the_post_thumbnail(); ?>
+								</div>
+							</a>
+						</li>
+						
+						<?php
+							endwhile;
+							wp_reset_postdata();
+						?>
+				
+				</ul>
+				<?php endif; // end of repeater loop. ?>
 		</aside>
 				
 		
@@ -85,10 +120,10 @@ get_header(); ?>
 				<?php endif; // end of repeater loop. ?>
 				
 				<?php if( get_field( 'people' ) ): ?>
-				<li><strong>Cast:</strong>
+				<li class="cast-list"><strong>Cast:</strong>
 					<?php while( has_sub_field( 'people' ) ): ?>
 						<span><?php the_sub_field( 'person' ); ?></span>
-						<span>&nbsp;/&nbsp;</span>
+						<span class="spacer">&nbsp;/&nbsp;</span>
 					<?php endwhile; ?>
 				</li>
 				<?php endif; // end of repeater loop. ?>

@@ -26,6 +26,7 @@
 	<?php do_action( 'before' ); ?>
 	<header id="masthead" class="site-header" role="banner">
 		<hgroup>
+			<div class="masthead-image-box"></div>
 			<img id="masthead-image" src="<?php bloginfo( 'stylesheet_directory' );?>/images/masthead.png" />
 		</hgroup>
 

@@ -116,6 +116,9 @@ body {
 
 #page {
 	width: 1024px;
+	/*width: 95%;
+	min-width: 1024px;
+	max-width: 1300px;*/
 	margin: 0px auto;
 	font-family: calibri, sans-serif;
 	font-size: 12pt;
@@ -425,6 +428,19 @@ a:active {
 	height: 102px;
 }
 
+#masthead-image {
+	position: relative;
+	z-index: 100;
+}
+
+.masthead-image-box {
+	background: black;
+	height: 72px;
+	width: 100%;
+	position: absolute;
+	z-index: 0;
+}
+
 
 
 
@@ -543,6 +559,7 @@ a:active {
 .site-main {
 	position: relative;
 	padding: 0px;
+	min-height: 900px;
 }
 .sticky {
 }
@@ -792,7 +809,7 @@ a:active {
 
 /*person-page*/
 .person-page .main-content {
-	width: 514px;
+	width: 50%;
 	margin-left: 170px;
 	padding: 25px 20px 0px 20px;
 	float: left;
@@ -810,6 +827,10 @@ a:active {
 
 .vital-statistics p {
 	display: inline;
+}
+
+.cast-list span.spacer:last-of-type {
+	display: none;
 }
 
 .person-page .main-content h2 {

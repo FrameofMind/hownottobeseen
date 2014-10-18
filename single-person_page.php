@@ -67,6 +67,41 @@ get_header(); ?>
 						<?php endwhile; ?>
 					<?php endif; // end of repeater loop. ?>
 				</ul>
+				
+				<?php if( !get_field( 'related_titles' ) ): ?>
+				<h1>Other People</h1>
+				<ul>
+						<?php
+							$do_not_duplicate = null;
+							$args = array(
+								'post_type' => 'person_page',
+								'showposts' => 5,
+								/*'order' => 'ASC',
+								'orderby' => 'title'*/
+								'orderby' => 'rand'
+							);
+							$otherpeople_query = new WP_Query( $args );
+							while ( $otherpeople_query->have_posts() ) : $otherpeople_query->the_post();
+						?>
+					
+					
+						<li>
+							<a class="title-link" href="<?php the_permalink(); ?>">
+								<h2><?php the_title(); ?></h2>
+								<div class="masked-image-wrapper">
+									<div class="image-mask"></div>
+									<?php the_post_thumbnail(); ?>
+								</div>
+							</a>
+						</li>
+						
+						<?php
+							endwhile;
+							wp_reset_postdata();
+						?>
+				
+				</ul>
+				<?php endif; // end of repeater loop. ?>
 		</aside>
 		
 		
@@ -79,19 +114,30 @@ get_header(); ?>
 			</header>
 			
 			<ul class="vital-statistics">
-				<li><strong>Date of Birth:</strong> <?php the_field( 'date_of_birth' ); ?></li>
-				<li><strong>Most Famous For:</strong> <?php the_field( 'most_famous_for' ); ?></li>
+				<?php if( get_field('date_of_birth') ): ?>
+					<li><strong>Date of Birth:</strong> <?php the_field( 'date_of_birth' ); ?></li>
+				<?php endif; // end of repeater loop. ?>
+				<?php if( get_field('most_famous_for') ): ?>
+					<li><strong>Most Famous For:</strong> <?php the_field( 'most_famous_for' ); ?></li>
+				<?php endif; // end of repeater loop. ?>
 			</ul>
-					
-			<h2>My Thoughts</h2>
-			<?php get_template_part( 'content' ); ?>
 			
+			<?php if( get_the_content() ): ?>
+			<h2>My Thoughts</h2>
+				<?php get_template_part( 'content' ); ?>
+			<?php endif; // end of repeater loop. ?>
+			
+			<?php if( get_field('strengths') ): ?>
 			<h2>Strengths</h2>
 				<?php the_field( 'strengths' ); ?>
+			<?php endif; // end of repeater loop. ?>
 					
+			<?php if( get_field('weaknesses') ): ?>
 			<h2>Weaknesses</h2>
 				<?php the_field( 'weaknesses' ); ?>
+			<?php endif; // end of repeater loop. ?>
 			
+			<?php if( get_field('filmography') ): ?>
 			<h2>Filmography</h2>
 				<table class="filmography">
 						<tr>
@@ -102,8 +148,6 @@ get_header(); ?>
 							<th>Character</th>
 							<th>Role Type</th>
 						</tr>
-						
-				<?php if( get_field('filmography') ): ?>
 					<?php while( has_sub_field('filmography') ): ?>
 						<tr>
 							<td class="year"><?php the_sub_field('year'); ?></td>
@@ -114,9 +158,8 @@ get_header(); ?>
 							<td class="role"><?php the_sub_field('role_type'); ?></td>
 						</tr>
 					<?php endwhile; ?>
-				<?php endif; // end of filmography repeater loop. ?>
 				</table><!-- .filmography -->
-			
+			<?php endif; // end of filmography repeater loop. ?>
 
 		<?php endwhile; // end of the loop. ?>
 
